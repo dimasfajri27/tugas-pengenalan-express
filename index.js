@@ -5,7 +5,7 @@ const pendataan = require("./router/routes-data-orang");
 
 app.use(express.json());
 app.use("/lingkaran-tabung", bangunDatar);
-app.use("/data-orang", pendataan)
+app.use("/", pendataan)
 
 const port = 3000;
 
