@@ -30,7 +30,7 @@ exports.getRumus = (req, res) => {
 
 exports.getHitungByNumber = (req, res) => {
 const number = parseInt(req.params.angka);
-res.json(
+res.send(
     "JariJari:" +  r  +  ",tinggi:" + t + 
     ",Volume tabung :"+ volumeTabung +
     ",Luas alas tabung :"+ LuasAlas +
