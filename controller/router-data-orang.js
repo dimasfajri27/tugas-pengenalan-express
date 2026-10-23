@@ -27,3 +27,10 @@ exports.getDataorang = (req, res) => { // membuat logic ngambil data orang
 
     res.send(output.join("<br>"));
 };
+
+exports.getdataById = (req, res) => {
+    const id = parseInt(req.params.id);
+    const data = dataOrang.find(d => d.id === id);
+    if(!data) return res.status(404).json({message : "maaf data tidak ditemukan"});
+    res.status(200).json(data);
+};
